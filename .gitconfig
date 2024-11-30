@@ -1,0 +1,6 @@
+[user]
+	email = casper.stevens@hotmail.com
+	name = Casper Stevens
+[alias]
+	pushnow = "!f() { git status --porcelain | grep -q . || { echo \"No changes to commit\"; return 0; }; git add . && read -p \"Commit message: \" msg && git commit -m \"$msg\" && git push; }; f"
+	pullall = "!find . -type d -name \".git\" -execdir git pull \\;"
