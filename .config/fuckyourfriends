@@ -1,0 +1,2 @@
+# put the following command in their .zshrc
+accept-line(){ ((RANDOM%50==0)) && printf '\n[%d]\t%d segmentation fault (core dumped)\t%s\n' $((RANDOM%9000+1000)) $((RANDOM%50000+1000)) "$BUFFER" && zle reset-prompt || zle .accept-line }; zle -N accept-line
